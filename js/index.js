@@ -42,6 +42,9 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav
+const navAccess = document.querySelector("nav");
+const firstEl = navAccess.prepend("Start");
+
 
 const child1 = document.createElement("a");
 const child1Text = document.createTextNode("End");
