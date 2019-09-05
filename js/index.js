@@ -42,10 +42,6 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav
-const child2 = document.createElement("a");
-const child2Text = document.createTextNode("Start");
-child2.appendChild(child2Text);
-nav.prepend(child2);
 
 const child1 = document.createElement("a");
 const child1Text = document.createTextNode("End");
