@@ -43,7 +43,10 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav
 const navAccess = document.querySelector("nav");
-const firstEl = navAccess.prepend("Start");
+const firstEl = document.createElement("a");
+navAccess.appendChild(firstEl);
+navAccess.prepend("Start");
+navAccess.style.color = "green";
 
 
 const child1 = document.createElement("a");
@@ -68,6 +71,8 @@ nav1[5].style.color = "green";
 //h1
 const headline = document.querySelector(".cta .cta-text h1");
 headline.textContent = siteContent["cta"]["h1"];
+headline.style.color = "blue";
+headline.style.lineHeight = "100px";
 
 //button
 const button = document.querySelector(".cta .cta-text button");
@@ -105,10 +110,19 @@ const contact = document.querySelector(".contact h4");
 contact.textContent = siteContent["contact"]["contact-h4"];
 
 const contact2 = document.querySelectorAll(".contact p");
-contact2[0].textContent = siteContent["contact"]["address"];
+contact2[0].innerHTML = siteContent["contact"]["address"];
 contact2[1].textContent = siteContent["contact"]["phone"];
 contact2[2].textContent = siteContent["contact"]["email"];
 
 //footer
 const foot = document.querySelector("footer p");
 foot.textContent = siteContent["footer"]["copyright"];
+
+//stretch
+const newButton = document.querySelector('button');
+newButton.addEventListener('click', event => 
+{event.target.style.backgroundColor = 'green'; });
+
+newButton.addEventListener('mouseout', event => 
+{event.target.style.backgroundColor = 'white'; 
+event.target.style.color = "blue"; });
